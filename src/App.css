@@ -1,38 +1,193 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*::-webkit-scrollbar-track {
+  width: 10px;
+  border-radius: 10px;
+  background: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*::-webkit-scrollbar {
+  width: 10px;
+  background: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #2196f3;
+  height: 40px;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  max-height: 100%;
+  font-family: "Open Sans", sans-serif;
+  transition: 0.3s all;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.centered {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.shadow {
+  box-shadow: 0px 0px 5px 1px lightslategray;
+  border-radius: 10px;
+}
+
+.side-nav {
+  width: 220px;
+  height: 215px;
+  padding: 10px;
+}
+
+.side-nav span {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.side-nav input[type="checkbox"] {
+  transform: scale(1.4);
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.side-nav h6 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 12px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: 15px;
+  text-transform: uppercase;
+}
+
+.side-nav .inp-wrapper {
+  justify-content: flex-start;
+  margin: 5px;
+}
+
+.nav {
+  width: 500px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+.nav .active {
+  background: linear-gradient(45deg, #2196f3, blue);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav button {
+  width: 33.33%;
+  height: 100%;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  background-color: whitesmoke;
+  cursor: pointer;
+  transition: 0.3s all;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav button:hover {
+  background-color: #2196f3;
+  color: white;
+}
+
+.nav :first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.nav :last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card {
+  width: 500px;
+  height: 270px;
+  margin: 10px;
+}
+
+.loader {
+  width: 80px;
+  height: 80px;
+  justify-self: center;
+  align-self: center;
+  margin-top: 40%;
+}
+
+.loader img {
+  animation: loader 2s ease infinite;
+}
+
+.loader span {
+  margin: 10px;
+  text-transform: uppercase;
+  animation: text-loader 2s ease infinite;
+}
+
+.card-wrapper {
+  height: 75vh;
+  width: 100%;
+  overflow-y: auto;
+  align-items: center;
+}
+
+.card .card-header,
+.card .segment-wrapper {
+  width: 90%;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.card .card-header {
+  height: 20%;
+}
+
+.card .price {
+  color: #2196f3;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.card span {
+  margin: 5px;
+}
+
+.grey {
+  color: #a0b0b9;
+  text-transform: uppercase;
+}
+
+.circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  transition: 0.3s all;
+  margin: 5px;
+  cursor: pointer;
 }
